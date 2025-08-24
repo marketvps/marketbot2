@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ربات مترجم تلگرام</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0088cc 0%, #24a5e0 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0088cc;
+        }
+        .btn {
+            background: #0088cc;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 ربات مترجم تلگرام</h1>
+        <p>ربات مترجم با استفاده از API عمومی Google Translate</p>
+        <p>این ربات از طریق GitHub Pages میزبانی می‌شود.</p>
+        
+        <a href="https://t.me/your_bot_username" class="btn" target="_blank">
+            شروع گفتگو با ربات
+        </a>
+        
+        <h2>📁 ساختار پروژه در GitHub</h2>
+        <pre>
+/ (root)
+├── index.html          # این صفحه
+├── worker.js           # کد Cloudflare Worker
+├── README.md           # راهنما
+└── .github/workflows/
+    └── deploy.yml      # GitHub Actions workflow
+        </pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install Wrangler
+      run: npm install -g @cloudflare/wrangler
+
+    - name: Deploy to Cloudflare Workers
+      run: wrangler deploy
+      env:
+        CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

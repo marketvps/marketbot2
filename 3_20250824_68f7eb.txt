@@ -1,0 +1,14 @@
+name = "telegram-translator-bot"
+compatibility_date = "2023-10-01"
+account_id = "your_account_id"
+workers_dev = true
+
+[vars]
+TELEGRAM_BOT_TOKEN = "8103181920:AAGvAa38hCQ4AdhYoMxph2W6JSsAHOknaM4"
+CHANNEL_ID = "@marketvpsir"
+
+[env.production]
+zone_id = "your_zone_id"
+routes = [
+    "your-domain.com/telegram-bot/*"
+]
